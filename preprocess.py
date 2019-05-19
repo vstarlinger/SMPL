@@ -19,8 +19,7 @@ if __name__ == '__main__':
     'shapedirs': np.array(src_data['shapedirs']),
     'f': np.array(src_data['f']),
     'kintree_table': src_data['kintree_table']
+    'cocoplus_regressor': src_data['cocoplus_regressor']
   }
-  if 'cocoplus_regressor' in src_data.keys():
-    model['joint_regressor'] = src_data['cocoplus_regressor']
   with open(output_path, 'wb') as f:
     pickle.dump(model, f)
